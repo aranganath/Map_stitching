@@ -1,0 +1,191 @@
+Initial Conditions:
+if (hd_params():
+	max_norm = 8;
+    rho_cell_size = 0.03;
+    angular_cell_size_deg = 3;
+    upsample = 1;
+    guess_rot_max_peaks1 = 2;
+    guess_rot_max_peaks2 = 6;
+    guess_rot_first_corr_num_hyp = 3;
+    guess_rot_max_correction_deg = 6;
+    guess_rot_num_compensations = 4;
+    guess_rot_merge_hyp_threshold_deg = 5;
+    closest_peaks_threshold = 15;
+    cyl_amplitude_deg = 150;
+    cyl_num_alpha_steps  = 15;
+    cyl_num_beta_steps = 256;
+    guess_tran_max_directions = 8;
+    guess_tran_max_num_hyp = 4;
+    guess_tran_two_birds_one_stone = 1;
+    hausdorff_num_points = 200;
+    }
+
+    hausdorff_plausible_threshold = 0.3;
+    debug_compensation_show = true;
+    debug_true_R = false;
+    debug_true_T = false;){
+    Evaluating 2097152
+	Bestfit distance:0.0108845
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:0.008352 0.000454989 -0.00696493
+	Secondfit distance:0.0149786
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:0.00860612 -0.0065992 0.0103317
+	Thirdfit distance:0.0263384
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:0.00169071 -0.00190302 -0.0262151
+	}
+
+
+New Conditions:
+if(h3d_params():
+	##Rest remain the same
+	rho_cell_size=0.2){
+	Bestfit distance:0.00931544
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:0.000412713 0.00809161 0.00459706
+	Secondfit distance:0.00955817
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:0.00919954 -0.000797961 -0.00246787
+	Thirdfit distance:0.0145292
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:-0.00833397 -0.00454424 -0.0109997
+	}
+	
+	if(h3d_params():
+	##Rest remain the same
+	rho_cell_size=2){
+	Evaluating 724992
+	Bestfit distance:0.00931544
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:0.000412713 0.00809161 0.00459706
+	Secondfit distance:0.00955817
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:0.00919954 -0.000797961 -0.00246787
+	Thirdfit distance:0.0145292
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:-0.00833397 -0.00454424 -0.0109997
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	rho_cell_size=2){
+	Evaluating 9569
+	Bestfit distance:0
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:0 0 0
+	Secondfit distance:0.0567507
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:0.0128898 0.054127 0.0111697
+	Thirdfit distance:0.0567507
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:-0.0128898 -0.054127 -0.0111697
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	rho_cell_size=2
+	guess_rot_max_peaks2=5){
+	Evaluating 8737
+	Bestfit distance:0
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:0 0 0
+	Secondfit distance:0.0567507
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:0.0128898 0.054127 0.0111697
+	Thirdfit distance:0.0567507
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:-0.0128898 -0.054127 -0.0111697
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	guess_rot_max_peaks2=5){
+	Evaluating 1703936
+	Bestfit distance:0.0224577
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:-0.00117142 0.0181378 0.0131908
+	Secondfit distance:0.025222
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:-0.00551783 -0.0245971 -0.000825231
+	Thirdfit distance:0.0276241
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:0.0132542 -0.014841 0.0191615
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	guess_rot_max_peaks2=4;){
+	Evaluating 1310720
+	Bestfit distance:0.0224577
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:-0.00117142 0.0181378 0.0131908
+	Secondfit distance:0.025222
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:-0.00551783 -0.0245971 -0.000825231
+	Thirdfit distance:0.0276241
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:0.0132542 -0.014841 0.0191615
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	guess_rot_max_peaks2=3;){
+	Evaluating 917504
+	Bestfit distance:0.0224577
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:-0.00117142 0.0181378 0.0131908
+	Secondfit distance:0.025222
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:-0.00551783 -0.0245971 -0.000825231
+	Thirdfit distance:0.0276241
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:0.0132542 -0.014841 0.0191615
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	guess_rot_max_peaks2=2;){
+	Evaluating 720896
+	Bestfit distance:0.0224577
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:-0.00117142 0.0181378 0.0131908
+	Secondfit distance:0.025222
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:-0.00551783 -0.0245971 -0.000825231
+	Thirdfit distance:0.0276241
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:0.0132542 -0.014841 0.0191615
+	}
+
+	if(h3d_params():
+	##Rest remain the same
+	guess_rot_max_peaks2=1;){
+	Evaluating 393216
+	Bestfit distance:0.0224577
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:-0.00117142 0.0181378 0.0131908
+	Secondfit distance:0.025222
+	Secondfit rotation:1 0 0 0 1 0 0 0 1 
+	Secondfit translation:-0.00551783 -0.0245971 -0.000825231
+	Thirdfit distance:0.0276241
+	Thirdfit rotation:1 0 0 0 1 0 0 0 1 
+	Thirdfit translation:0.0132542 -0.014841 0.0191615
+	}
+
+
+	if(h3d_params():
+	##Rest remain the same
+	rho_cell_size=30;)
+	{	
+	Evaluating 217
+	Bestfit distance:0
+	Bestfit rotation:1 0 0 0 1 0 0 0 1 
+	Bestfit translation:0 0 0
+	Secondfit distance:5.88711
+	Secondfit rotation:-0.0231697 -0.0463645 0.998656 0.999658 -0.0131868 0.0225807 0.0121221 0.998838 0.0466542 
+	Secondfit translation:0 0 0
+	Thirdfit distance:5.91284
+	Thirdfit rotation:-0.0306797 0.999086 0.0297503 -0.0302792 -0.0306796 0.999071 0.99907 0.0297504 0.0311928 
+	Thirdfit translation:0 0 0
+	}

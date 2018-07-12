@@ -1,0 +1,100 @@
+Hough Scan Matcher 3D -- Version 0.11
+
+REVISION HISTORY
+----------------
+Feb 2009 - Version 0.11
+Fixed a bug in rot_axis_angle that sneaked in while posting the online version
+
+Set 2008 - Version 0.1
+Initial version
+
+AUTHORIGHTS
+-----------
+Before using this software make sure you understand and
+agree to the terms of use included in the DISCLAIMER file.
+
+REFERENCES
+----------
+This software is the version used to produce the results
+described in our ICRA 2009 paper:
+
+A. Censi, S. Carpin. "HSM3D: feature-less global 6DOF scan-matching 
+in the Hough/Radon domain"
+
+A pdf version of the paper is available on the authors' websites.
+The current software version is neither elegant nor optimized for
+performance, but rather grew out of iterative development
+cycles. Successive versions will addres performance and style.
+
+This software has been developed and tested with g++
+4.2.3 on a Linux system (Ubuntu 8.04, kernel 2.6.24)
+and with g++ 4.0.1 on a OsX system (Intel, OsX 10.5.4).
+A corresponding MATLAB implementation is available at
+http://purl.org/censi/2008/hsm3d
+
+
+DEPENDENCIES
+------------
+Json-c is needed in order to run some of the examples
+and load scan data from files.
+Get version 0.7 from http://oss.metaparadigm.com/json-c.
+Json-c is not needed for HSM, but just to load scans from
+file. It is assumed json-c is installed in /usr/local.
+If not, change the -L and -I to the appropriate
+path.
+
+BUILDING
+--------
+Edit Makefile to select the right kind of platform
+(read instructions therein). The library can be built using 
+single or double floating point precision. By default it uses
+single precision. If you prefer double precision, edit  
+Makefile and add -DDOUBLE_PRECISION to FLAGS. Then just
+type "make".
+
+FILELIST
+--------
+common.h common.cpp: mainly definitions of math objects
+	   and functions.
+
+coordinates.h coordinates.cpp: coordinates definitions and
+	  conversion routines
+
+hough3d.h hough3d.cpp: definition and implementation of the class 
+	  h3d_struct
+
+scan3d.h scan3d.cpp: representation of a point cloud returned by
+	 a 3D range scanner
+
+io.h io.cpp: routines to load and save points from/to files
+
+testcoordinates.cpp: test program to verify coordinates conversion
+
+testhough.cpp: test program to verify consistency between C++
+	       and MATLAB implementations. It will produce a set of
+	       files called "save...". These are used for test driven
+	       development and debugging.
+
+testcomplete.cpp: test program to match a couple of three dimensional scans
+		  
+testvisibility.cpp: debug program to verify visibility score
+
+HOW TO USE THE LIBRARY
+----------------------
+See testcomplete for an illustrative example. The steps are the following:
+
+1- create two instances of scan3D with the point clouds you want to register.
+These can be either loaded form file or created on the fly.
+2- create two instances of h3d_struct to hold the two Hough spectra
+3- initialize the h3d_struct instances using compute_cube_ht or
+compute_cube_ht_normals
+4- call guess_rotations 
+5- for every guessed rotation call guess_translation
+6- call evaluate_solutions_hausdorff to rank the solutions
+
+DOXYGEN DOCUMENTATION
+---------------------
+Documentation for indidual functions and classes can be automatically generated
+using Doxygen. Note that this functionality was developed and tested only with 
+Doxygen 1.5.6 so it may not work with other versions. To build the doxygen   
+files type "make doc".
